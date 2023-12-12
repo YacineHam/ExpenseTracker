@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% block content %}
+  <h2>Receipts List</h2>
+  <a href="{% url 'receipt-create' %}">Add New Receipt</a>
+  <ul>
+    {% for receipt in object_list %}
+      <li>
+        {{ receipt.store_name }} - {{ receipt.purchase_date }} - ${{ receipt.total_amount }}
+        <a href="{% url 'receipt-detail' receipt.id %}">View</a>
+        <a href="{% url 'receipt-update' receipt.id %}">Edit</a>
+        <a href="{% url 'receipt-delete' receipt.id %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
