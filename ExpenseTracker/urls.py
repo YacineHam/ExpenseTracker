@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from receipts.views import ReceiptListView,ReceiptDetailView,ReceiptCreateView,ReceiptUpdateView,ReceiptDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', ReceiptListView.as_view(), name='receipt-list'),
+    path('receipt/<int:pk>/', ReceiptDetailView.as_view(), name='receipt-detail'),
+    path('receipt/new/', ReceiptCreateView.as_view(), name='receipt-create'),
+    path('receipt/<int:pk>/edit/', ReceiptUpdateView.as_view(), name='receipt-update'),
+    path('receipt/<int:pk>/delete/', ReceiptDeleteView.as_view(), name='receipt-delete'),
 ]
