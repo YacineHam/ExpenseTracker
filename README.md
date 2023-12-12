@@ -4,7 +4,7 @@
 Django Receipt Tracker is a web application for managing and tracking receipts. Users can create, view, update, and delete their receipts.
 
 ## Installation
-1. Clone the repository: `git clone [repo-link]`
+1. Clone the repository: `git clone https://github.com/YacineHam/ExpenseTracker`
 2. Navigate to the project directory: `cd Django-Receipt-Tracker`
 3. Install required packages: `pip install -r requirements.txt`
 
